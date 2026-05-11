@@ -5,21 +5,21 @@
 class Larm < Formula
   desc "Larm CLI -- uptime monitoring from the command line"
   homepage "https://larm.dev"
-  version "0.2.0"
+  version "0.3.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/larmhq/larm-cli/releases/download/v0.2.0/larm_0.2.0_darwin_amd64.tar.gz"
-      sha256 "bad990c1952425246d22b09544b6f4474fcbd25e256b050be97432cda52f9c75"
+      url "https://github.com/larmhq/larm-cli/releases/download/v0.3.0/larm_0.3.0_darwin_amd64.tar.gz"
+      sha256 "38f43cee59dcec2a5d542e861e1f27029ab5129e6ed458ab3d6d46a1170fa49b"
 
       define_method(:install) do
         bin.install "larm"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/larmhq/larm-cli/releases/download/v0.2.0/larm_0.2.0_darwin_arm64.tar.gz"
-      sha256 "0c20d5cb2a0985f0910a9905b1313552a08fdaa949386e91625bb298b26ed666"
+      url "https://github.com/larmhq/larm-cli/releases/download/v0.3.0/larm_0.3.0_darwin_arm64.tar.gz"
+      sha256 "ddb63d3fea8d8dcbf3e9a8624d2176db6aa9d3410a0655e51dfd8ed602464ffa"
 
       define_method(:install) do
         bin.install "larm"
@@ -29,15 +29,15 @@ class Larm < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/larmhq/larm-cli/releases/download/v0.2.0/larm_0.2.0_linux_amd64.tar.gz"
-      sha256 "e3f3f622926389df4cac44e058c549b4cebdc308772875668aebcf52fbce643e"
+      url "https://github.com/larmhq/larm-cli/releases/download/v0.3.0/larm_0.3.0_linux_amd64.tar.gz"
+      sha256 "db5110c01e5166019d25ab03f923db67013d9a2fedabed4faea0b2b859689281"
       define_method(:install) do
         bin.install "larm"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/larmhq/larm-cli/releases/download/v0.2.0/larm_0.2.0_linux_arm64.tar.gz"
-      sha256 "763db1bbb4d19ca67466373358cad2b79314bab9c0e41f89599eba9657661605"
+      url "https://github.com/larmhq/larm-cli/releases/download/v0.3.0/larm_0.3.0_linux_arm64.tar.gz"
+      sha256 "3db970e040ec73a8ad614d34778b81b0922244a0ee52477d22d8309cf610bf3b"
       define_method(:install) do
         bin.install "larm"
       end
